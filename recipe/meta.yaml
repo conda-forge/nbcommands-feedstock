@@ -1,13 +1,13 @@
 {% set name = "nbcommands" %}
-{% set version = "0.3.2" %}
+{% set version = "0.4.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: "https://github.com/vinayak-mehta/nbcommands/archive/v{{ version }}.tar.gz"
-  sha256: 77c6911e7171a2cabb584159e898a7932e90613512b0cfec8744055a4d3b1985
+  url: https://github.com/vinayak-mehta/nbcommands/archive/v{{ version }}.tar.gz
+  sha256: 2c5e0962a75ee3decff0687bf98cb5597fa6da95ec2dfa259b3512086c4cf68c
 
 build:
   noarch: python
@@ -19,7 +19,7 @@ build:
     - nbhead = nbcommands._head:head
     - nbtail = nbcommands._tail:tail
     - nbcat = nbcommands._cat:cat
-  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
@@ -42,7 +42,7 @@ about:
   license: Apache-2.0
   license_family: Apache
   license_file: LICENSE
-  summary: 'Unix commands for Jupyter notebooks!'
+  summary: Unix commands for Jupyter notebooks!
   description: |
     nbcommands bring the goodness of Unix commands to Jupyter notebooks.
   doc_url: https://nbcommands.readthedocs.io/
