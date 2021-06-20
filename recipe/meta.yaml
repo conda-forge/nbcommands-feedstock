@@ -1,5 +1,5 @@
 {% set name = "nbcommands" %}
-{% set version = "0.4.0" %}
+{% set version = "0.5.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/vinayak-mehta/nbcommands/archive/v{{ version }}.tar.gz
-  sha256: 2c5e0962a75ee3decff0687bf98cb5597fa6da95ec2dfa259b3512086c4cf68c
+  sha256: fd7b3cdd8d9d28e03e20a4997bd4f3ad2d50bc86f6af4b485fe7711cfe7f7b54
 
 build:
   noarch: python
